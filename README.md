@@ -7,5 +7,8 @@ Gone are the days where the bigger your wedding ring, the more the man loves you
 
 # Features
 :white_check_mark: logic
+<br>
 :white_large_square: leaderboard
+<br>
 :white_large_square: farm at Jones vault
+<br>
