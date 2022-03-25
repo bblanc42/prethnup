@@ -1,0 +1,18 @@
+{
+  "abi": [
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6080604052348015600f57600080fd5b50604580601d6000396000f3fe608060405236600a57005b600080fdfea2646970667358221220c06bea1555cb1a53a4f5cebdf935c7f317e1355e76b4af56f38b8d56e721762f64736f6c634300080a0033",
+    "sourceMap": "214:52:4:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405236600a57005b600080fdfea2646970667358221220c06bea1555cb1a53a4f5cebdf935c7f317e1355e76b4af56f38b8d56e721762f64736f6c634300080a0033",
+    "sourceMap": "214:52:4:-:0;;;;;;;;;;",
+    "linkReferences": {}
+  }
+}
