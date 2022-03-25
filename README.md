@@ -6,6 +6,6 @@ Dear girls, do you boyfriends never shut up about crypto? Ask him to prove that 
 Gone are the days where the bigger your wedding ring, the more the man loves you. Your boy now has the chance to prove that he loves you more than other boys love their girls by depositing more $ETH.
 
 # Features
-:white_check_mark logic
-:white_large_square leaderboard
-:white_large_square farm at Jones vault
+:white_check_mark: logic
+:white_large_square: leaderboard
+:white_large_square: farm at Jones vault
