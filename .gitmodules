@@ -1,3 +1,6 @@
 [submodule "prethnup-sol/lib/ds-test"]
 	path = prethnup-sol/lib/ds-test
 	url = https://github.com/dapphub/ds-test
+[submodule "prethnup-sol/lib/solmate"]
+	path = prethnup-sol/lib/solmate
+	url = https://github.com/Rari-Capital/solmate
