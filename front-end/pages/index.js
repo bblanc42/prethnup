@@ -59,12 +59,12 @@ export default function Home() {
 
   return (
     <>
+      <h1>PrETHnup</h1>
       {!currentAccount &&
         <button className="connectButton"
           onClick={connectWallet}>
           Connect wallet
         </button>}
-      Hello
     </>
   )
 }
