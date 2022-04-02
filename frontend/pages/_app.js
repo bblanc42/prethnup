@@ -1,5 +1,6 @@
 import { DAppProvider, Mainnet, Rinkeby, useEtherBalance, useEthers } from "@usedapp/core";
 import { formatEther } from '@ethersproject/units'
+import ResponsiveAppBar from './navbar'
 
 const INFURA_PROJECT_KEY = process.env.NEXT_PUBLIC_INFURA_PROJECT_KEY;
 
@@ -29,6 +30,7 @@ function App() {
 function MyApp({ Component, pageProps }) {
   return (
     <DAppProvider config={config}>
+      <ResponsiveAppBar />
       <App />
       <Component {...pageProps} />
     </DAppProvider>
