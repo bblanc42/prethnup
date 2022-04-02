@@ -1,12 +1,29 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
+import Input from '@mui/material/Input'
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
+import { interact } from "../../hooks/"
+import { utils } from "ethers"
 
 export default function Pledge() {
+	const { stakeSend, stakeState } = interact()
+
+	const [amount, setAmount] = React.useState(0)
+	const handleInputChange = (event) => {
+		const newAmount = event.target.value === "" ? "" : Number(event.target.value)
+		setAmount(newAmount)
+		console.log(newAmount)
+	}
+
+	const handleStakeSubmit = () => {
+		const amountAsWei = utils.parseEther(amount.toString())
+		return stakeSend(amountAsWei.toString())
+	}
+
 	return (
 		<>
 			<Container maxWidth="sm" >
@@ -46,9 +63,11 @@ export default function Pledge() {
 							variant="outlined"
 						/>
 					</Box>
+					<Input onChange={handleInputChange} />
 					<Button
 						variant="contained"
 						size="large"
+						onClick={handleStakeSubmit}
 					>
 						Pledge
 					</Button>

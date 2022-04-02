@@ -12,9 +12,9 @@ import MenuItem from '@mui/material/MenuItem';
 import Link from 'next/link'
 
 const pages = [
-	{ 'name': 'Pledge', 'url': '/api/pledge' },
-	{ 'name': 'Break', 'url': '/api/break' },
-	{ 'name': 'Withdraw', 'url': '/api/withdraw' },
+	{ 'name': 'Pledge', 'url': '/urls/pledge' },
+	{ 'name': 'Break', 'url': '/urls/break' },
+	{ 'name': 'Withdraw', 'url': '/urls/withdraw' },
 ];
 
 const ResponsiveAppBar = () => {
