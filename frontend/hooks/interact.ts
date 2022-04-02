@@ -24,5 +24,5 @@ export const interact = () => {
     stakeSend(amountToStake, addrToSend)
   }, [amountToStake, addrToSend])
 
-  return { stakeSend, stakeState }
+  return { stakeSend }
 }
