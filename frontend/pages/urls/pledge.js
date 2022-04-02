@@ -9,19 +9,31 @@ import TextField from '@mui/material/TextField';
 import { interact } from "../../hooks/"
 import { utils } from "ethers"
 
-export default function Pledge() {
-	const { stakeSend, stakeState } = interact()
+const startValues = {
+	amount: 0,
+	toAddr: "",
+}
 
-	const [amount, setAmount] = React.useState(0)
+export default function Pledge() {
+	// const { stakeSend, stakeState } = interact()
+
+	const [pledgeObj, setPledgeObj] = React.useState(startValues)
+
 	const handleInputChange = (event) => {
-		const newAmount = event.target.value === "" ? "" : Number(event.target.value)
-		setAmount(newAmount)
-		console.log(newAmount)
+		const { name, value } = event.target
+		setPledgeObj(prevState => {
+			return {
+				...prevState,
+				[name]: value,
+			}
+		})
+		console.log(pledgeObj)
 	}
 
 	const handleStakeSubmit = () => {
-		const amountAsWei = utils.parseEther(amount.toString())
-		return stakeSend(amountAsWei.toString())
+		console.log("handleStakeSubmit")
+		// const amountAsWei = utils.parseEther(amount.toString())
+		// return stakeSend(amountAsWei.toString())
 	}
 
 	return (
@@ -42,6 +54,8 @@ export default function Pledge() {
 						autoComplete="off"
 					>
 						<TextField
+							value={pledgeObj.amount}
+							onChange={handleInputChange}
 							style={{ width: '100%' }}
 							id="outlined-basic"
 							label="ETH to pledge"
@@ -57,13 +71,14 @@ export default function Pledge() {
 						autoComplete="off"
 					>
 						<TextField
+							value={pledgeObj.toAddr}
+							onChange={handleInputChange}
 							style={{ width: '100%' }}
 							id="outlined-basic"
 							label="Address"
 							variant="outlined"
 						/>
 					</Box>
-					<Input onChange={handleInputChange} />
 					<Button
 						variant="contained"
 						size="large"
