@@ -15,25 +15,27 @@ const startValues = {
 }
 
 export default function Pledge() {
-	// const { stakeSend } = interact()
+	const [pledgeObj, setPledgeObj] = React.useState({ startValues })
 
-	const [pledgeObj, setPledgeObj] = React.useState(startValues)
+	const { stakeSend } = interact(pledgeObj.toAddr)
 
 	const handleInputChange = (event) => {
 		const { name, value } = event.target
+		console.log(pledgeObj)
 		setPledgeObj(prevState => {
 			return {
 				...prevState,
 				[name]: value,
 			}
 		})
-		console.log(pledgeObj)
 	}
 
 	const handleStakeSubmit = () => {
 		console.log("handleStakeSubmit")
-		// const amountAsWei = utils.parseEther(pledgeObj.amount.toString())
-		// return stakeSend(amountAsWei.toString(), pledgeObj.toAddr)
+		const amountAsWei = utils.parseEther(pledgeObj.amount.toString())
+		console.log(`amount: ${amountAsWei}`)
+		console.log(`addr: ${pledgeObj.toAddr?.toString()}`)
+		return stakeSend(amountAsWei.toString(), pledgeObj.toAddr.toString())
 	}
 
 	return (
