@@ -2,7 +2,6 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import Input from '@mui/material/Input'
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
@@ -21,13 +20,13 @@ export default function Pledge() {
 
 	const handleInputChange = (event) => {
 		const { name, value } = event.target
-		console.log(pledgeObj)
 		setPledgeObj(prevState => {
 			return {
 				...prevState,
 				[name]: value,
 			}
 		})
+		console.log(`pledgeObj: ${pledgeObj}`)
 	}
 
 	const handleStakeSubmit = () => {

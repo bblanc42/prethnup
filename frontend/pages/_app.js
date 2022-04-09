@@ -15,9 +15,9 @@ const config = {
 
 function App() {
   const { activateBrowserWallet, account } = useEthers()
-  console.log(account)
+  console.log(`account: ${account}`)
   const etherBalance = useEtherBalance(account)
-  console.log(etherBalance)
+  console.log(`etherBalance: ${etherBalance}`)
   return (
     <div>
       {!account && <button onClick={() => activateBrowserWallet()}>Connect</button>}
