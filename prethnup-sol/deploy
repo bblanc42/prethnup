@@ -1,0 +1,14 @@
+#!/bin/sh
+
+source .dapprc
+
+echo ${ETH_RPC_URL}
+
+forge create \
+    --rpc-url ${ETH_RPC_URL} \
+    --private-key ${PRIVATE_KEY} \
+    src/Prethnup.sol:Prethnup
+
+# Deployer: 0xfc03e07fd3792b274142a0a710b9b7c5adc5ee90
+# Deployed to: 0x101dda533984c0ed196e8643cdc889d4d58a7cd6
+# Transaction hash: 0xb7d0329332078b3d899fcb4fc43b4dcbdf180f6b484e26de6b3df232be12ba9f
